@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Paper, Rock, Scisors</title>
+    <link rel = "stylesheet" href = "stylesheet/style.css">
+</head>
+<body>
+  <h1>WELCOME, to Paper, Rock, Scisors</h1>
+
+  <!--These are the buttons that the user clicks to choose
+   - Rock, Paper, or Scisors.
+ -->
+  <ul>
+    <li><button id = "rock" class = "shoot">Rock</button></li>
+    <li><button id = "paper" class = "shoot">Paper</button></li>
+    <li><button id = "scisors" class = "shoot">Scisors</button></li>
+  </ul>
+  <!-- The content between this div prints out what the user and the
+  -computer chose, as well as whether or not the user won.
+  -->
+  <div class = "banner">
+    <p id = "choice"></p>
+    <p id = "winOrLose"></p>
+  </div>
+<!-- The contents in this div keep track of the both the user's
+- and the computers score.
+-->
+  <div class = "score">
+    <span class = "label">USER: </span><span id = "userScore">0</span>
+    <span class = "lable">COMPUTER: </span><span id = " computerScore">0</span>
+  </div>
+<!-- This div keeps track of the ties-->
+  <div class = "tieLable">
+    <p></p>
+  </div>
+
+</body>
+</html>
