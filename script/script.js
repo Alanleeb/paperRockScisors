@@ -1,5 +1,6 @@
 var userScore = 0
 var computerScore = 0
+var draws = 0
 var userScore_span = document.getElementById('userScore')
 var computerScore_span = document.getElementById('computerScore')
 var choiceText_p = document.getElementById('choice')
@@ -9,25 +10,29 @@ var rock_btn = document.getElementById('rock')
 var paper_btn = document.getElementById('paper')
 var scisors_btn = document.getElementById('scisors')
 
-function win(user, computer) {
+function win(choice, computerChoice) {
   userScore++
   userScore_span.innerHTML = userScore
   computerScore_span.innerHTML = computerScore
-  choiceText_p.innerHTML = "You chose " + user + " and the computer chose " + computer
-  winnerText_p.innerHTML = user + " beats " + computer + ", YOU WIN! "
+  choiceText_p.innerHTML = "You chose " + choice + " and the computer chose " + computerChoice
+  winnerText_p.innerHTML = choice + " beats " + computerChoice + ", YOU WIN! "
 }
 
-function lose(user, computer) {
+function lose(choice, computerChoice) {
   computerScore++
   userScore_span.innerHTML = userScore
   computerScore_span.innerHTML = computerScore
-  choiceText_p.innerHTML = "You chose " + user + " and the computer chose " + computer
-  winnerText_p.innerHTML = computer + " beats " + user + ", YOU LOSE!"
+  choiceText_p.innerHTML = "You chose " + choice + " and the computer chose " + computerChoice
+  winnerText_p.innerHTML = computerChoice + " beats " + choice + ", YOU LOSE!"
 }
 
-function draw(user, computer) {
-  choiceText_p.innerHTML = "You chose " + user + " and the computer chose " + computer
-  winnerText_p.innerHTML = user + " and " + computer + "are the same, IT'S A DRAW!"
+function draw(choice, computerChoice) {
+  draws++
+  userScore_span.innerHTML = userScore
+  computerScore_span.innerHTML = computerScore
+  tieCount.innerHTML = draws
+  choiceText_p.innerHTML = "You chose " + choice + " and the computer chose " + computerChoice
+  winnerText_p.innerHTML = choice + " and " + computerChoice + "are the same, IT'S A DRAW!"
 }
 
 function compChoice(){
